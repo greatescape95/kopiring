@@ -6,7 +6,7 @@
 /out-tsc
 
 #bundles
-/wwwroot
+#/wwwroot
 
 # dependencies
 /node_modules
