@@ -13321,11 +13321,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/ct/dev/hello-world/hello-world.csproj",
+      "projectUniqueName": "/home/ct/dev/kopiring/hello-world.csproj",
       "projectName": "hello-world",
-      "projectPath": "/home/ct/dev/hello-world/hello-world.csproj",
+      "projectPath": "/home/ct/dev/kopiring/hello-world.csproj",
       "packagesPath": "/home/ct/.nuget/packages/",
-      "outputPath": "/home/ct/dev/hello-world/obj/",
+      "outputPath": "/home/ct/dev/kopiring/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/share/dotnet/sdk/NuGetFallbackFolder"
