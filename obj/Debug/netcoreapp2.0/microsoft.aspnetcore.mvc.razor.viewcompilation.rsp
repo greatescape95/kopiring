@@ -1,0 +1,5 @@
+/home/ct/dev/kopiring
+--output-path=obj/Debug/netcoreapp2.0/
+--application-name=hello-world
+--content-root=/home/ct/dev/kopiring
+--file=
