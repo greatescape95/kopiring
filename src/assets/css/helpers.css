@@ -1,0 +1,19 @@
+.margin-bottom-20px {
+    margin-bottom: 50px !important;
+}
+
+.padding-bottom-20px {
+    padding-bottom: 50px !important;
+}
+
+.margin-top-5px {
+    margin-top: 5px !important;
+}
+
+.current-menu-item {
+    border-bottom: 3px solid #2eaef0 !important;
+} 
+
+.padding-top-50px {
+    padding-top: 50px;
+}

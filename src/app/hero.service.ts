@@ -10,7 +10,7 @@ import { MessageService } from './message.service';
 @Injectable()
 export class HeroService {
 
-  private heroesUrl = 'api/heroes'; 
+  private heroesUrl = 'api/heroes';
 
   constructor(
     private http: HttpClient,
