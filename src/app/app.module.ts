@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 import { AppComponent } from './app.component';
@@ -70,7 +71,8 @@ import { ServicesComponent } from './components/services/services.component';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [AppService, HeroService, UserService, MessageService, InMemoryDataService, MenuService],
+  providers: [AppService, HeroService, UserService, MessageService, InMemoryDataService, MenuService,
+    {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
