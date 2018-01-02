@@ -2,43 +2,54 @@
   <div class="content">
       <div class="container">
          <div class="row">
-            <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12" id="contact-form">
+            <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12" id="contact-form" *ngIf="!isSubmitMessageVisible">
                <h3 class="title">Pošaljite nam e-mail</h3>
                <p>
                   Javite nam se sa zahtjevom za našim uslugama i odgovorit ćemo vam u što skorijem roku.
                </p>
                <div class="divider"></div>
-               <form method="post" class="reply" id="contact">
+               <form #contact="ngForm" (ngSubmit)="sendMail(contact)" class="reply" novalidate>
                   <fieldset>
                      <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                            <label>Ime: <span>*</span></label>
-                           <input class="form-control" id="name" name="name" type="text" value="" required>
+                           <input class="form-control" [(ngModel)]="contactForm.name" #name="ngModel" id="name" name="name" type="text" required>
+                           <app-show-errors [control]="name"></app-show-errors>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                           <label>E-mail: <span>*</span></label>
-                           <input class="form-control" type="email" id="email" name="email" value="" required>
+                           <label>E-mail:</label>
+                           <input class="form-control" [(ngModel)]="contactForm.email" #email="ngModel" type="email" id="email" name="email">
+                           <app-show-errors [control]="email"></app-show-errors>
                         </div>
                      </div>
                      <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                           <label>Naslov: <span>*</span></label>
-                           <input class="form-control" id="subject" name="subject" type="text" value="" required>
-                        </div>
+                           <label>Telefon: <span>*</span></label>
+                           <input class="form-control" [(ngModel)]="contactForm.phone" #phone="ngModel" id="subject" name="subject" type="text" required>
+                           <app-show-errors [control]="phone"></app-show-errors>
+                          </div>
                      </div>
                      <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                            <label>Poruka: <span>*</span></label>
-                           <textarea class="form-control" id="text" name="text" rows="3" cols="40" required></textarea>
-                        </div>
+                           <textarea class="form-control" [(ngModel)]="contactForm.message" #message="ngModel" type="text" id="text" name="text" rows="3" cols="40" required></textarea>
+                           <app-show-errors [control]="message"></app-show-errors>
+                          </div>
+                     </div>
+                     <div class="row" [hidden]="true">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                           <label>Test: <span>*</span></label>
+                           <input class="form-control" [(ngModel)]="contactForm.spamFilter" id="subject" name="subject" type="text">
+                          </div>
                      </div>
                   </fieldset>
-                  <button class="btn btn-normal btn-color submit  bottom-pad" type="submit">Pošalji</button>
-                  <div class="success alert-success alert" style="display:none">Vaša poruka je uspješno poslana.</div>
-                  <div class="error alert-error alert" style="display:none">E-mail mora biti ispravan.</div>
+                  <button class="btn btn-normal btn-color submit  bottom-pad" type="submit" [disabled]="contact.invalid">Pošalji</button>
                   <div class="clearfix">
                   </div>
                </form>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12" id="contact-form" *ngIf="isSubmitMessageVisible">
+                <p>Vaša poruka je uspješno poslana.</p>
             </div>
             <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
                <div class="address widget">
@@ -60,7 +71,7 @@
                      <li>
                         <i class="fa fa-envelope"></i>
                         <p>
-                           <strong>E-mail:</strong><a href="kopiring.split@st.t-com.hr">kopiring.split@st.t-com.hr</a>
+                           <strong>E-mail:</strong><a href="mailto:kopiring.split@st.t-com.hr">kopiring.split@st.t-com.hr</a>
                         </p>
                      </li>
                   </ul>
@@ -77,10 +88,6 @@
                   <h3 class="title">Pratite nas</h3>
                   <div class="member-social dark">
                      <a class="facebook" href="http://www.facebook.com/kopiring"><i class="fa fa-facebook"></i></a>
-                     <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
-                     <a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a>
-                     <a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
-                     <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
                   </div>
                </div>
             </div>

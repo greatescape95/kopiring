@@ -21,7 +21,7 @@ img {
 h1,h2,h3,h4,h5,h6 {
     font-weight: normal;
     color: #777777;
-    font-family: 'Lato',sans-serif;
+    font-family: 'Roboto',sans-serif;
 	font-weight: 300;
 }
 
@@ -1116,10 +1116,11 @@ ul#filters {
 }
 
 .item .item-inner,.post-image {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     overflow: hidden;
     position: relative;
     border-radius: 2px;
+    text-align: center;
 }
 
 .post-image img, .img-content img{

@@ -25,11 +25,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this._appService.sayHello()
-      .subscribe(
-      result => {
-        this.greetings = result;
-      });
 
     jQuery(window).scroll(function () {
       if (jQuery(this).scrollTop() > 100) {
