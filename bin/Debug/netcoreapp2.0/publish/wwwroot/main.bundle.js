@@ -104,7 +104,6 @@ module.exports = "<!-- <h1>{{title}}</h1>\n<nav>\n  <a routerLink=\"/dashboard\"
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_service__ = __webpack_require__("../../../../../src/app/app.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -115,19 +114,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-
 var AppComponent = (function () {
-    function AppComponent(_appService) {
-        this._appService = _appService;
-        this.greetings = 'test';
-        this.title = 'Tour of Heroes';
-        if (document.getElementById('myScript')) {
-            document.getElementById('myScript').remove();
-        }
-        var myScript = document.createElement('script');
-        myScript.setAttribute('id', 'myScript');
-        myScript.setAttribute('src', 'scripts.bundle.js');
-        document.body.appendChild(myScript);
+    function AppComponent() {
     }
     AppComponent.prototype.ngOnInit = function () {
         jQuery(window).scroll(function () {
@@ -163,7 +151,7 @@ var AppComponent = (function () {
             template: __webpack_require__("../../../../../src/app/app.component.html"),
             styles: [__webpack_require__("../../../../../src/app/app.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__app_service__["a" /* AppService */]])
+        __metadata("design:paramtypes", [])
     ], AppComponent);
     return AppComponent;
 }());

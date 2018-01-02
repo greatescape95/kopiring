@@ -11,17 +11,8 @@ import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 })
 
 export class AppComponent implements OnInit {
-  greetings = 'test';
-  title = 'Tour of Heroes';
 
-  constructor(private _appService: AppService) {
-    if (document.getElementById('myScript')) {
-      document.getElementById('myScript').remove();
-    }
-    const myScript = document.createElement('script');
-    myScript.setAttribute('id', 'myScript');
-    myScript.setAttribute('src', 'scripts.bundle.js');
-    document.body.appendChild(myScript);
+  constructor() {
   }
 
   ngOnInit(): void {
