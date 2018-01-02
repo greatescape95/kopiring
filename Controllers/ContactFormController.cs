@@ -11,7 +11,7 @@ using System.Web.Http;
 
 namespace KopiringApi.Controllers
 {
-    [Route("api/[Controller]")]
+     [Route("api/[Controller]")]
     public class ContactFormController : Controller
     {
         [Route(nameof(SendContactData))]
@@ -19,6 +19,13 @@ namespace KopiringApi.Controllers
         public void SendContactData([FromBody] ContactFormData contactForm)
         {
             this.SendSimpleMessage(contactForm);
+        }
+
+        [Route(nameof(Hello))]
+        [HttpGet]
+        public string Hello()
+        {
+            return "test";
         }
 
         private IRestResponse SendSimpleMessage(ContactFormData form = null)
