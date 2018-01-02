@@ -18,6 +18,8 @@ namespace KopiringApi.Controllers
         [HttpPost]
         public void SendContactData([FromBody] ContactFormData contactForm)
         {
+            Console.WriteLine("text2");
+            Console.WriteLine(contactForm);
             this.SendSimpleMessage(contactForm);
         }
 
