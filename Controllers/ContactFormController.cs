@@ -25,11 +25,13 @@ namespace KopiringApi.Controllers
         [HttpGet]
         public string Hello()
         {
+            Console.WriteLine("text");
             return "test";
         }
 
         private IRestResponse SendSimpleMessage(ContactFormData form = null)
         {
+            Console.WriteLine("text2");
             RestClient client = new RestClient();
             client.BaseUrl = new Uri("https://api.mailgun.net/v3");
             client.Authenticator =
