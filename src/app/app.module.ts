@@ -36,6 +36,7 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { JumboprintComponent } from './components/jumboprint/jumboprint.component';
 import { ServicesComponent } from './components/services/services.component';
 import { ShowErrorsComponent } from './components/contact/show-errors/show-errors.component';
+import { PictureComponent } from './components/picture/picture.component';
 
 
 @NgModule({
@@ -62,6 +63,7 @@ import { ShowErrorsComponent } from './components/contact/show-errors/show-error
     JumboprintComponent,
     ServicesComponent,
     ShowErrorsComponent,
+    PictureComponent,
   ],
   imports: [
     BrowserModule,

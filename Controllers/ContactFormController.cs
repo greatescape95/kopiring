@@ -41,7 +41,7 @@ namespace KopiringApi.Controllers
             request.AddParameter("domain", "sandboxfd786728ba504d5aa063ea89c9c06786.mailgun.org", ParameterType.UrlSegment);
             request.Resource = "{domain}/messages";
             request.AddParameter("from", "Pošiljatelj preko web forme <postmaster@sandboxfd786728ba504d5aa063ea89c9c06786.mailgun.org>");
-            request.AddParameter("to", "winetastingbrac@gmail.com");
+            request.AddParameter("to", "kopiring.split@st.t-com.hr");
             request.AddParameter("subject", "Novi upit preko web kontakt forme");
             request.AddParameter("html", $"<p>Ime: {form.name}</p><br><p>Telefon: {form.phone}</p><br><p>Email: {form.email}</p><br><p>Poruka: {form.message}</p>");
             request.Method = Method.POST;

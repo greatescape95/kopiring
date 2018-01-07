@@ -25,3 +25,11 @@
 .padding-top-50px {
     padding-top: 50px;
 }
+
+
+/*banner*/
+@media (max-width: 768px) {
+    .banner-collapse {
+        display: none !important;
+    }
+}
