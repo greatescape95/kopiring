@@ -5,7 +5,6 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './in-memory-data.service';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
@@ -69,13 +68,10 @@ import { PictureComponent } from './components/picture/picture.component';
     BrowserModule,
     HttpModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    ),
     FormsModule,
     AppRoutingModule
   ],
-  providers: [AppService, HeroService, UserService, MessageService, InMemoryDataService, MenuService,
+  providers: [AppService, HeroService, UserService, MessageService, MenuService,
     {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })

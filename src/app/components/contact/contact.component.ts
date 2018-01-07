@@ -22,7 +22,7 @@ export class ContactComponent implements OnInit {
     spamFilter: null
   };
 
-  private isSubmitMessageVisible: boolean;
+  isSubmitMessageVisible: boolean;
 
   constructor(private menuService: MenuService,
     private _appService: AppService) { }

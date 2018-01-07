@@ -6,7 +6,7 @@ jQuery(document).ready(function () {
 	jQuery('body').waitForImages(function () {
 		// All descendant images have loaded, now slide up.
 		//                        alert("done");
-		jQuery(".page-mask").fadeOut(100);
+		jQuery(".page-mask").fadeOut(400);
 		jQuery('body').css('overflowY', 'auto');
 	});
 

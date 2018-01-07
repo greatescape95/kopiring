@@ -10,8 +10,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  private selectedMenuItem: MenuItem;
-  private menuItem = MenuItem;
+  selectedMenuItem: MenuItem;
+  menuItem = MenuItem;
 
   constructor(private menuService: MenuService,
     private router: Router) { }
