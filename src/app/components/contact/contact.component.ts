@@ -37,7 +37,6 @@ export class ContactComponent implements OnInit {
       this._appService.sendContactData(this.contactForm)
         .subscribe(
         result => {
-          console.log("test", this.contactForm);
           this.isSubmitMessageVisible = true;
         });
     }
