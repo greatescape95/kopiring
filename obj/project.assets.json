@@ -13621,9 +13621,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/ct/dev/kopiring/hello-world.csproj",
-      "projectName": "hello-world",
-      "projectPath": "/home/ct/dev/kopiring/hello-world.csproj",
+      "projectUniqueName": "/home/ct/dev/kopiring/kopiring.csproj",
+      "projectName": "kopiring",
+      "projectPath": "/home/ct/dev/kopiring/kopiring.csproj",
       "packagesPath": "/home/ct/.nuget/packages/",
       "outputPath": "/home/ct/dev/kopiring/obj/",
       "projectStyle": "PackageReference",

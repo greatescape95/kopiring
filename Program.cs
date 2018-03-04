@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using TodoApi;
 
-namespace hello_world
+namespace kopiring
 {
     public class Program
     {

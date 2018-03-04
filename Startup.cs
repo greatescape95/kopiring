@@ -9,13 +9,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using TodoApi.Models;
 using Microsoft.EntityFrameworkCore;
 using MySQL.Data.EntityFrameworkCore;
 using MySQL.Data.EntityFrameworkCore.Extensions;
 using Microsoft.AspNetCore.HttpOverrides;
 
-namespace hello_world
+namespace kopiring
 {
     public class Startup
     {
@@ -29,9 +28,6 @@ namespace hello_world
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // services.AddDbContext<TodoContext>(opt => opt.UseInMemoryDatabase("TodoList"));
-            services.AddDbContext<TodoContext>(options =>
-                 options.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
             services.AddMvc();
         }
 
